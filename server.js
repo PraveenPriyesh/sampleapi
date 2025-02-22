@@ -18,8 +18,7 @@ app.get("/api/information",(req,res)=>{
 app.get('/api/information/2',(req,res)=>{
     res.json(information[1]);
 })
-app.listen(Port,()=>{
-    console.log(`Successfully running on http://localhost:${Port}/api/information`);
-})
-
-    
+// app.listen(Port,()=>{
+//     console.log(`Successfully running on http://localhost:${Port}/api/information`);
+// })
+export default information;
