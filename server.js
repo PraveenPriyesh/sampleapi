@@ -1,17 +1,10 @@
 const express= require('express');
 const app=express();
+const cors=require('cors');
 app.use(express.json());
+app.use(cors());
 const Port=2000;
-const information=[
-    name1={
-        "Status":"Api created successfully",
-        "Addition infor":"None"
-    },
-    name3={
-        "Status1":"Data2 is working",
-        "Addition infor1":"none"
-    }
-];
+const information=require('./data.json');
 app.get("/api/information",(req,res)=>{
     res.json(information);
 })
